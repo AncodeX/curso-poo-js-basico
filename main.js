@@ -25,3 +25,27 @@ Student.prototype.aprobarCurso = function(nuevoCursito) {
 }
 
 const juanita = new Student("Juanita", 20, ["Curso basico de JavaScript", "Curso de programación orientada a objetos con C#"]);
+
+class Student2 {
+    constructor({
+        cursosAprobados = [],
+        age,
+        email,
+        name,
+    }) {
+        this.name = name;
+        this.age = age;
+        this.cursosAprobados = cursosAprobados;
+        this.email = email;
+    }
+
+    aprobarCurso(nuevoCursito) {
+        this.cursosAprobados.push(nuevoCursito);
+    }
+}
+
+const miguel = new Student2({
+    name: "Miguel",
+    email: "miguel30@platzi.com",
+    age: 30,
+});
