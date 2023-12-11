@@ -3,8 +3,24 @@ class Course {
         name,
         difficultyLevel,
     }) {
-        this.name = name;
-        this.difficultyLevel = difficultyLevel;
+        this._name = name;
+        this._difficultyLevel = difficultyLevel;
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(name) {
+        this._name = name;
+    }
+
+    get difficultyLevel() {
+        return this._difficultyLevel;
+    }
+
+    set difficultyLevel(difficultyLevel) {
+        this._difficultyLevel = difficultyLevel;
     }
 }
 
@@ -50,12 +66,28 @@ class LearningPath {
         name,
         courses = []
     }) {
-        this.name = name;
-        this.courses = courses;
+        this._name = name;
+        this._courses = courses;
     }
 
     addCourse(course) {
         this.courses.push(course);
+    }
+
+    get name() {
+        return this._name;
+    }
+
+    set name(name) {
+        this._name = name;
+    }
+
+    get courses() {
+        return this._courses;
+    }
+
+    set courses(courses) {
+        this._courses = courses;
     }
 }
 
@@ -98,14 +130,70 @@ class Student {
         approvedCourses = [],
         learningPaths = [],
     }) {
-        this.name = name;
-        this.email = email;
-        this.username = username;
-        this.twitter = twitter;
-        this.instagram = instagram;
-        this.facebook = facebook;
-        this.approvedCourses = approvedCourses;
-        this.learningPaths = learningPaths;
+        this._name = name;
+        this._email = email;
+        this._username = username;
+        this._twitter = twitter;
+        this._instagram = instagram;
+        this._facebook = facebook;
+        this._approvedCourses = approvedCourses;
+        this._learningPaths = learningPaths;
+    }
+
+    get name() {
+        return this._name;
+    }
+    set name(name) {
+        this._name = name;
+    }
+
+    get email() {
+        return this._email;
+    }
+    set email(email) {
+        this._email = email;
+    }
+
+    get username() {
+        return this._username;
+    }
+    set username(username) {
+        this._username = username;
+    }
+
+    get twitter() {
+        return this._twitter;
+    }
+    set twitter(twitter) {
+        this._twitter = twitter;
+    }
+
+    get instagram() {
+        return this._instagram;
+    }
+    set instagram(instagram) {
+        this._instagram = instagram;
+    }
+
+    get facebook() {
+        return this._facebook;
+    }
+    set facebook(facebook) {
+        this._facebook = facebook;
+    }
+
+    get approvedCourses() {
+        return this._approvedCourses;
+    }
+    set approvedCourses(approvedCourses) {
+        this._approvedCourses = approvedCourses;
+    }
+
+    get learningPaths() {
+        return this._learningPaths;
+    }
+    set learningPaths(learningPaths) {
+        this._learningPaths = learningPaths;
     }
 }
 
